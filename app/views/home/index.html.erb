@@ -1,11 +1,21 @@
+<body style="background-color: #34495e">
+
+
+
+
+<div class="form-group" style="background-color: #ffffff; height: 500px; display: block;
+    margin-left: auto;
+    margin-right: auto;" >
 <h1 style="font-family: 'Roboto Mono', monospace; text-align: center;">Welcome to the CryptoCurrency Website</h1>
 
 
 <%= form_for @crypto, url: home_show_path do |f| %>
-<div class="form-group">
       <label>Choix de la crypto</label>  
       <%= f.collection_select :id, Cryptodb.order(:name),:id,:name, {include_blank: false} %>
       <%= f.submit %>
-</div>
+
 
 <% end %>
+</div>
+
+</body>

@@ -2,7 +2,11 @@ class HomeController < ApplicationController
   
 
   def index
+  	if Cryptodb.first == nil
+  	StartScrap.new.save
+  end
   	@crypto = Cryptodb.new
+
   end
 
   def show
